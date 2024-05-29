@@ -31,4 +31,22 @@ public class RiosMarco {
         System.out.println();
     }
 
+    public void rmSC1(int n) {
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                System.out.print("+ ");
+            } else {
+                System.out.print("- ");
+            }
+        }
+        System.out.println();
+    }
+
+    public void rmSC5(int n) {
+        String[] symbols = {"\\", "|", "/", "-", "|"};
+        for (int i = 0; i < n; i++) {
+            System.out.print(symbols[i % symbols.length] + " ");
+        }
+        System.out.println();
+    }
 }
