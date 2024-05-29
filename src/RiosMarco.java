@@ -49,4 +49,88 @@ public class RiosMarco {
         }
         System.out.println();
     }
+
+    public void rmF2(int tamanio) {
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio; j++) {
+                if (i == 0 || i == tamanio - 1) {
+                    if (j % 2 == 0) {
+                        System.out.print("* ");
+                    } else {
+                        System.out.print("+ ");
+                    }
+                } else if (j == 0 || j == tamanio - 1) {
+                    if (i % 2 == 0) {
+                        System.out.print("* ");
+                    } else {
+                        System.out.print("+ ");
+                    }
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void rmF6(int tamanio) {
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < (2 * i + 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public void rmF10(int tamanio){
+        String positivo = "|_+_";
+        String negativo = "|_-_";
+        for(int i = 0; i < tamanio; i++){
+            for(int j = 0; j < i; j++){
+                System.out.print("     ");
+            }
+            if(i%2!=0){
+                System.out.println(positivo);
+            }else{
+                System.out.println(negativo);
+            }
+        }
+        System.out.println();
+    }
+    
+
+    public void rmF14(int tamanio){
+        
+    }
+
+    public void rmF18(int tamanio) {
+        int[][] matriz = new int[tamanio][tamanio];
+        for (int i = 0; i < tamanio; i++) {
+            int num = 1;
+            for (int j = 0; j < tamanio; j++) {
+                if (j <= i) {
+                    if (j == 0 || j == 1) {
+                        matriz[i][j] = 1;
+                    } else {
+                        matriz[i][j] = matriz[i][j - 1] + matriz[i - 1][j - 1];
+                    }
+                } else {
+                    matriz[i][j] = num;
+                    num++;
+                }
+            }
+        }
+
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }  
+
+
 }
