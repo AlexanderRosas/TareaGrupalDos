@@ -1,7 +1,9 @@
-
+/*
+ * Clase RosasAriel
+ * @version 1.0
+ * @author arielrosas
+*/
 public class RosasAriel {
-
-
     public static void raSN1(int tamaño){
         int arValAnt = 0;
         int arValAct = 1;
@@ -70,29 +72,62 @@ public class RosasAriel {
 
     }
     public static void raSN5(int tamaño){
-        int arVal = 1;
+        int arVal = 2;
         System.out.print("SN5: ");
         for(int i =0;i<tamaño;i++){
-            if((arVal%2!=0)&&(arVal%3!=0)){
+            if(esPrimo(arVal)){
                 System.out.print(arVal + " ");
             }
             arVal++;
         }
     }
+    public static boolean esPrimo(int valor){
+        if (valor<=1){
+            return false;
+        }
+        for (int i=2;i<=Math.sqrt(valor);i++){
+            if (valor%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
     public static void raSN6(int tamaño){
         System.out.print("SN6: ");
+        int arVal = 1;
+        int arValDos = 1;
         for(int i =0;i<tamaño;i++){
+            System.out.print(arVal + " ");
+            arValDos = arValDos + 2;
+            arVal = arVal + arValDos;
             
         }
     }
     public static void raSN7(int tamaño){
-        
+        System.out.print("SN7: ");
+        int arVal = 1;
+        for(int i =0;i<tamaño;i++){
+            System.out.print(arVal + " ");
+            arVal = arVal + 3;
+        }  
     }
     public static void raSN8(int tamaño){
-        
+        System.out.print("SN8: ");
+        int arVal = 3;
+        for(int i =0;i<tamaño;i++){
+            System.out.print(arVal + " ");
+            arVal = arVal + 5;
+        }   
     }
-    public static void raSN9(int tamaño){
-        
+    public static void raSN10(int tamaño){
+        System.out.print("SN10: ");
+        int arVal = 3;
+        int arResult = 0;
+        for(int i =0;i<tamaño;i++){
+            System.out.print(arVal + " ");
+            arResult = arVal;
+            arVal = arResult*3;
+        } 
     }
 
 }
