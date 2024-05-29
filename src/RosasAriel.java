@@ -182,5 +182,12 @@ public class RosasAriel {
             arVal = arResult * 3;
         }
     }
+    /*
+     * Series de Caracteres
+     */
+    public static void raSC2(int tamaño){
+        System.out.print("SC2: ");
+        
+    }
 
 }
