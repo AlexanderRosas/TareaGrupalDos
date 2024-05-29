@@ -103,7 +103,23 @@ public class RiosMarco {
     
 
     public void rmF14(int tamanio){
-        
+           
+        for (int i = 0; i < tamanio; i++) {
+            
+            int mfNumero = 1;            
+            for (int j = 0; j < (tamanio*2) - 2; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 0; j <= i; j++) {
+                System.out.print(mfNumero + "   ");
+                mfNumero = mfNumero * (i - j) / (j + 1);
+            }
+            
+            tamanio += -1;
+            System.out.println("");
+        }
+        System.out.println("");   
     }
 
     public void rmF18(int tamanio) {
