@@ -123,30 +123,17 @@ public class RiosMarco {
     }
 
     public void rmF18(int tamanio) {
-        int[][] matriz = new int[tamanio][tamanio];
-        for (int i = 0; i < tamanio; i++) {
-            int num = 1;
-            for (int j = 0; j < tamanio; j++) {
-                if (j <= i) {
-                    if (j == 0 || j == 1) {
-                        matriz[i][j] = 1;
-                    } else {
-                        matriz[i][j] = matriz[i][j - 1] + matriz[i - 1][j - 1];
-                    }
-                } else {
-                    matriz[i][j] = num;
-                    num++;
+        for (int i = 1; i <= tamanio; i++) {
+            System.out.print("1 ");
+            for (int j = 2; j <= i; j++) {
+                int num = 1;
+                for (int k = 2; k <= j; k++) {
+                    num += k;
                 }
+                System.out.print(num + " ");
             }
+            System.out.println("2");
         }
-
-        for (int i = 0; i < tamanio; i++) {
-            for (int j = 0; j < tamanio; j++) {
-                System.out.print(matriz[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }  
-
+    }
 
 }
