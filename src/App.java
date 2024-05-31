@@ -40,5 +40,7 @@ public class App {
         riosMarco.rmF18(n);
 
         sc.close();
+
+
     }
 }
