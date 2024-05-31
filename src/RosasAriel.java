@@ -185,9 +185,23 @@ public class RosasAriel {
     /*
      * Series de Caracteres
      */
-    public static void raSC2(int tamaño){
-        System.out.print("SC2: ");
+
+    public static void serieFibonnacciConCaracteres(int tamaño, char caracter){
+        System.out.print("SC1: ");
+        int arValAnt = 0;
+        int arValAct = 1;
+        for (int i = 1; i <= tamaño; i++) {
+
+            for (int arResult = 0; arResult <= i; arResult++) {
+                System.out.print(caracter);
+            }
+            System.out.print(" ");
+            int temp = arValAnt;
+            arValAnt = arValAct;
+            arValAct = temp+arValAct;
+        }
         
+
     }
 
 }
