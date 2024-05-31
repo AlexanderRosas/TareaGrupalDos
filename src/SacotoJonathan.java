@@ -1,8 +1,5 @@
 public class SacotoJonathan {
-    /*
-     * Esta serie mostrará la impresion alterna de signos
-     * + y -
-     */
+
     public static void jsSC1(){
         System.out.println("jsSC1");
         String simbolo1 = "+";
