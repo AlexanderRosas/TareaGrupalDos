@@ -39,6 +39,14 @@ public class App {
         System.out.println("Figura F18:");
         riosMarco.rmF18(n);
 
+        SacotoJonathan.jsSN4();
+        SacotoJonathan.jsSN8();
+        SacotoJonathan.jsSC4();
+        SacotoJonathan.jsSC8();
+        SacotoJonathan.jsSC9();
+        SacotoJonathan.jsFN1();
+        SacotoJonathan.jsFN5();
+        SacotoJonathan.jsFN13();
         sc.close();
     }
 }
