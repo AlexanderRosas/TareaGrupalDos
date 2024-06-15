@@ -284,6 +284,7 @@ public class RosasAriel {
      * @param tamano El tamaño del Triángulo de Pascal a imprimir.
      */
     public static void raSF15(int tamano){
+        System.out.println("Figura 15:");
         int[][] arTrianguloPascal = new int[tamano][tamano];
         arTrianguloPascal[0][0] = 1;
         for (int i = 1; i < tamano; i++) {
@@ -299,6 +300,63 @@ public class RosasAriel {
             }
         System.out.println();
         }
+    }
+    /**
+     * Este método toma una frase y una vocal, y reemplaza todas las ocurrencias de la vocal en la frase por un espacio.
+     *
+     * @param frase La frase en la que se va a realizar la sustitución.
+     * @param vocal La vocal que se va a reemplazar por un espacio.
+     */
+    public void raCC2(String frase, char vocal){
+        System.out.println("Cadena 02");
+        String fraseSinVocal;
+        fraseSinVocal = frase.replace(String.valueOf(vocal), " ");
+        System.out.println(fraseSinVocal);
+    }
+    /**
+     * Este método toma una frase y convierte las letras alternadamente a mayúsculas y minúsculas.
+     * Los caracteres no alfabéticos se agregan tal como están.
+     *
+     * @param frase La frase que se va a convertir.
+     */
+    public void raCC9(String frase){
+        System.out.println("Cadena 09");
+        StringBuilder fraseNv = new StringBuilder();
+        boolean convMayuscula = true;
+        for(int i = 0;i<frase.length();i++){
+            char caracter = frase.charAt(i);
+            if (Character.isLetter(caracter)) {
+                if (convMayuscula) {
+                    fraseNv.append(Character.toUpperCase(caracter));
+                } else {
+                    fraseNv.append(Character.toLowerCase(caracter));
+                }
+                convMayuscula = !convMayuscula;
+            } else {
+                fraseNv.append(caracter);
+            }
+        }
+        System.out.println(fraseNv);
+    }
+
+    public static void raAR1(){
+        System.out.println("Arrays 01:");
+        System.out.println("Ingrese su nombre completo");
+    }
+    public static void raLoadings7(){
+            
+    }
+    public static void raLoadings11(){
+            
+    }
+    public static void raLoadings9(){
+            
+    }
+    public static void raRecur3(){
+            
+    }
+    public static void raRecur6(){
+            
     }
 
 }
