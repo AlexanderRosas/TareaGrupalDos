@@ -3,7 +3,6 @@
  * @version 1.0
  * @author arielrosas
  */
-
 import java.util.Scanner;
 
 public class RosasAriel {
@@ -14,269 +13,92 @@ public class RosasAriel {
      * Imprime los números de la serie de Fibonacci.
      */
     public static void raSN1(int tamano) {
+
         int arValAnt = 0;
         int arValAct = 1;
         int arResult = 0;
         System.out.print("SN1: ");
-        for (int i = 0; i < tamano; i++) {
-            System.out.print(arResult + " ");
-            arResult = arValAct + arValAnt;
+        for(int i = 0;i<tamaño;i++){
+            System.out.print(arResult+" "); 
+            arResult = arValAct +   arValAnt; 
             arValAnt = arValAct;
-            arValAct = arResult;
+            arValAct = arResult; 
         }
-    }
 
-    /*
-     * Genera una serie donde cada par de números consecutivos incrementan de dos en dos.
-     * @param tamano La cantidad de pares de términos de la serie a generar.
-     * Imprime la serie en pares consecutivos incrementando de dos en dos.
-     */
-    public static void raSN2(int tamano) {
+    }
+    public static void raSN2(int tamaño){
         System.out.print("SN2: ");
         int arResltUno = 0;
         int arResltDos = 1;
-        for (int i = 0; i < tamano; i++) {
-            System.out.print(arResltUno + " " + arResltDos + " ");
-            arResltDos = arResltDos + 2;
+        for(int i = 0;i<tamaño;i++){
+            System.out.print(arResltUno+" " + arResltDos +" "); 
+            arResltDos = arResltDos+2;            
         }
-    }
 
-    /*
-     * Genera una serie de fracciones con numerador basado en la serie de Fibonacci y denominador en números impares.
-     * @param tamano La cantidad de términos de la serie a generar.
-     * Imprime una serie de fracciones con denominador impar.
-     */
-    public static void raSN3(int tamano) {
+    }
+    public static void raSN3(int tamaño){
         int arNum = 0;
         int arDem = 0;
         int arValAnt = 0;
         int arValAct = 1;
         System.out.print("SN3: ");
-        for (int i = 0; i < tamano; i++) {
-            if ((arDem % 2) != 0) {
-                System.out.print(arNum + "/" + arDem + " ");
-                if (arNum == 0) {
-                    arNum += 1;
-                } else {
-                    arNum = arValAct + arValAnt;
-                    arValAnt = arValAct;
-                    arValAct = arNum;
+        for(int i =0;i<tamaño;i++){
+            if((arDem % 2)!=0){
+                System.out.print(arNum + "/" + arDem +" ");
+                if(arNum==0){
+                    arNum+=1;
+                }else{
+                arNum = arValAct +   arValAnt; 
+                arValAnt = arValAct;
+                arValAct = arNum;
                 }
             }
             arDem++;
         }
-    }
 
-    /*
-     * Genera una serie de fracciones con numerador basado en la serie de Fibonacci y denominador en números pares.
-     * @param tamano La cantidad de términos de la serie a generar.
-     * Imprime una serie de fracciones con denominador par.
-     */
-    public static void raSN4(int tamano) {
+    }
+    public static void raSN4(int tamaño){
         System.out.print("SN4: ");
         int arNum = 0;
         int arDem = 0;
         int arValAnt = 0;
         int arValAct = 1;
-        for (int i = 0; i < tamano; i++) {
-            if ((arDem % 2) == 0) {
-                System.out.print(arNum + "/" + arDem + " ");
-                if (arNum == 0) {
-                    arNum += 1;
-                } else {
-                    arNum = arValAct + arValAnt;
-                    arValAnt = arValAct;
-                    arValAct = arNum;
+        System.out.print("SN3: ");
+        for(int i =0;i<tamaño;i++){
+            if((arDem % 2)==0){
+                System.out.print(arNum + "/" + arDem +" ");
+                if(arNum==0){
+                    arNum+=1;
+                }else{
+                arNum = arValAct +   arValAnt; 
+                arValAnt = arValAct;
+                arValAct = arNum;
                 }
             }
             arDem++;
         }
-    }
 
-    /*
-     * Genera una serie de números primos hasta un tamano especificado.
-     * @param tamano La cantidad de números primos a generar.
-     * Imprime una serie de números primos.
-     */
-    public static void raSN5(int tamano) {
-        int arVal = 2;
+    }
+    public static void raSN5(int tamaño){
+        int arVal = 1;
         System.out.print("SN5: ");
-        for (int i = 0; i < tamano; i++) {
-            if (esPrimo(arVal)) {
+        for(int i =0;i<tamaño;i++){
+            if((arVal%2!=0)&&(arVal%3!=0)){
                 System.out.print(arVal + " ");
             }
             arVal++;
         }
     }
-
-    /*
-     * Determina si un número dado es primo.
-     * @param valor El número a evaluar.
-     * @return Devuelve true si el número es primo, de lo contrario false.
-     */
-    public static boolean esPrimo(int valor) {
-        if (valor <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(valor); i++) {
-            if (valor % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /*
-     * Genera una serie donde cada término es el resultado de sumar el doble del índice anterior más uno.
-     * @param tamano La cantidad de términos de la serie a generar.
-     * Imprime la serie resultante.
-     */
-    public static void raSN6(int tamano) {
+    public static void raSN6(int tamaño){
         System.out.print("SN6: ");
-        int arVal = 1;
-        int arValDos = 1;
-        for (int i = 0; i < tamano; i++) {
-            System.out.print(arVal + " ");
-            arValDos = arValDos + 2;
-            arVal = arVal + arValDos;
+        for(int i =0;i<tamaño;i++){
+            
         }
     }
-
-    /*
-     * Genera una serie donde cada término incrementa en tres unidades respecto al anterior.
-     * @param tamano La cantidad de términos de la serie a generar.
-     * Imprime la serie resultante.
-     */
-    public static void raSN7(int tamano) {
-        System.out.print("SN7: ");
-        int arVal = 1;
-        for (int i = 0; i < tamano; i++) {
-            System.out.print(arVal + " ");
-            arVal = arVal + 3;
-        }
+    public static void raSN7(int tamaño){
+        
     }
-
-    /*
-     * Genera una serie donde cada término incrementa en cinco unidades respecto al anterior.
-     * @param tamano La cantidad de términos de la serie a generar.
-     * Imprime la serie resultante.
-     */
-    public static void raSN8(int tamano) {
-        System.out.print("SN8: ");
-        int arVal = 3;
-        for (int i = 0; i < tamano; i++) {
-            System.out.print(arVal + " ");
-            arVal = arVal + 5;
-        }
-    }
-
-    /*
-     * Genera una serie donde cada término es el resultado de multiplicar el término anterior por tres.
-     * @param tamano La cantidad de términos de la serie a generar.
-     * Imprime la serie resultante.
-     */
-    public static void raSN10(int tamano) {
-        System.out.print("SN10: ");
-        int arVal = 3;
-        int arResult = 0;
-        for (int i = 0; i < tamano; i++) {
-            System.out.print(arVal + " ");
-            arResult = arVal;
-            arVal = arResult * 3;
-        }
-    }
-    /*
-     * Imprime un patrón de caracteres basado en la secuencia de Fibonacci.
-     * Esta función imprime una línea de caracteres donde cada grupo de caracteres se
-     * imprime una cantidad de veces que corresponde a losvalores de Fibonacci.
-     * @param tamano La cantidad de grupos de caracteres que se deben imprimir.
-     * @param caracter El carácter que se imprimirá.
-     */
-    public static void raSC2(int tamano, char caracter) {
-        System.out.print("SC2: ");
-        for (int i = 1; i <= tamano; i++) {
-            int fibValue = valoresFibonacci(i);
-            for (int j = 0; j < fibValue; j++) {
-                System.out.print(caracter);
-            }
-            System.out.print(" ");
-        }
-    }
-    /*
-     * Esta funcion devuelve el valor correspondiente a la posicion "arN" en la seucuencia
-     * de Fibonnaci
-     * @param arN La posicion en la secuencia de Fibonacci para cual se desea el valor
-     * @return El valor de Fibonnaci en la posicion de "arN"
-     */
-    public static int valoresFibonacci(int arN) {
-        if (arN <= 0) return 0;
-        if (arN == 1) return 1;
-        int arNum1 = 0, arN2 = 1;
-        for (int i = 2; i <= arN; i++) {
-            int next = arNum1 + arN2;
-            arNum1 = arN2;
-            arN2 = next;
-        }
-        return arN2;
-    }
-    /**
-     * Imprime una secuencia de caracteres comenzando desde 'a' hasta un tamano especificado.
-     * Esta función imprime caracteres en secuencia comenzando desde 'a' (ASCII 97)
-     * hasta el número de caracteres especificado por el parámetro `tamano`
-     * @param tamano
-     */
-    public static void raSC6(int tamano) {
-        System.out.print("SC6: ");
-        for (int i = 0; i <= tamano; i++) {
-            if (tamano > 25 ){
-                break;
-            }
-            System.out.print((char)(i + 97));
-            System.out.print(" ");
-        }
-    }
-    /*
-     * Imprime un triángulo rectángulo usando un carácter especificado con espacios entre cada carácter.
-     * Esta función imprime un triángulo rectángulo, donde cada fila tiene un número creciente
-     * de caracteres especificados por el parámetro `caracter`, comenzando desde 1 hasta el tamano especificado.
-     * @param caracter El carácter que se imprimirá para formar el triángulo.
-     * @param tamano La altura del triángulo.
-     */
-    public static void raSF3(char caracter,int tamano){
-        int arColum = 1;
-        int arFil = tamano;
-        for (;arColum<=arFil;arColum++){
-            for (int i = 0; i < arColum; i++) {
-                System.out.print(caracter+" ");
-            }
-            System.out.println();
-        }
-    }
-    /*
-     * Imprime una escalera de "---" y barras verticales "|", depende un tamano dado.
-     */
-    public static void raSF7(int tamano){
-        int arColum = 1;
-        int arFil = tamano;
-        for (;arColum<=arFil;arColum++){
-            for (int i = 0; i < arColum; i++) {
-                System.out.print("---"+" ");
-            }
-            System.out.println("|");  
-        }
-    }
-    /*
-     * Imprime una escalera de "---" y barras verticales "|", depende un tamano dado.
-     */
-    public static void raSF11(int tamano){
-        int arColum = 1;
-        int arFil = tamano;
-        for (;arColum<=arFil;arColum++){
-            for (int i = 0; i < arColum; i++) {
-                System.out.print("---"+" ");
-            }
-            System.out.println("|");  
-        }
+    public static void raSN8(int tamaño){
         
     }
     /**
@@ -303,6 +125,9 @@ public class RosasAriel {
             }
         System.out.println();
         }
+      
+    public static void raSN9(int tamaño){
+        
     }
     /**
      * Este método toma una frase y una vocal, y reemplaza todas las ocurrencias de la vocal en la frase por un espacio.
@@ -445,3 +270,5 @@ public class RosasAriel {
     }
 
 }
+
+
