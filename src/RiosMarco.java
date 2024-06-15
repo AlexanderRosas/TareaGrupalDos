@@ -306,4 +306,29 @@ public class RiosMarco {
         System.out.println();
     }
 
+    public static void rmR02() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el primer número (a):");
+        int a = scanner.nextInt();
+
+        System.out.println("Ingrese el segundo número (b):");
+        int b = scanner.nextInt();
+
+        int resultado = sumaRecursiva(a, b, 0);
+
+        System.out.println("La suma de " + a + " y " + b + " es: " + resultado);
+
+        scanner.close();
+    }
+
+    private static int sumaRecursiva(int a, int b, int acumulado) {
+ 
+        if (b == 0) {
+            return acumulado + a;
+        }
+
+        return sumaRecursiva(a, b - 1, acumulado + 1);
+    }
+
 }
