@@ -1,54 +1,56 @@
 import java.util.Scanner;
 
 public class App {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        int NroTermino = 0, KsNroTermino2 = 0; 
+        String caracter;
         RiosMarco riosMarco = new RiosMarco();
-
-        System.out.println("¿Cuántos términos de cada serie quieres imprimir?");
-        int n = sc.nextInt();
-
-        System.out.println("Serie SN3:");
-        riosMarco.rmSN3(n);
-
-        System.out.println("Serie SN7:");
-        riosMarco.rmSN7(n);
-
-        System.out.println("Serie SN11:");
-        riosMarco.rmSN11(n);
-        
-        System.out.println("Serie SC1:");
-        riosMarco.rmSC1(n);
-
-        System.out.println("Serie SC5:");
-        riosMarco.rmSC5(n);
-
-        System.out.println("Figura F2:");
-        riosMarco.rmF2(n);
-
-        System.out.println("Figura F6:");
-        riosMarco.rmF6(n);
-
-        System.out.println("Figura F10:");
-        riosMarco.rmF10(n);
-
-        System.out.println("Figura F14:");
-        riosMarco.rmF14(n);
-
-        System.out.println("Figura F18:");
-        riosMarco.rmF18(n);
-
+        KatherineSanchez ks = new KatherineSanchez();
+        System.out.println("~~~~~~~~~~~Bienvenido~~~~~~~~~~~");
+        System.out.print("Ingrese caracter con el que se formaran las figuras: ");
+        caracter = sc.nextLine();
+        do {
+            try {
+                System.out.print("Ingrese cantidad de terminos que desea ver: ");
+                NroTermino = sc.nextInt();
+            } 
+            catch (Exception e) { 
+                System.out.println("***Asegurese que el valor ingresado sea correcto***");
+                sc.next();
+            }
+        } while (NroTermino <= 0);
+        System.out.println("~~~~~~~~~~~SERIES NUMERICAS~~~~~~~~~~~");
+        ks.ksSN1(NroTermino);
+        riosMarco.rmSN3(NroTermino);
+        ks.ksSN5(NroTermino);
         SacotoJonathan.jsSN4();
+        riosMarco.rmSN7(NroTermino);
+        riosMarco.rmSN11(NroTermino);
         SacotoJonathan.jsSN8();
+        ks.ksSN9(NroTermino);
+        System.out.println("~~~~~~~~~~~SERIES DE CARACTERES~~~~~~~~~~~");
+        riosMarco.rmSC1(NroTermino);
+        ks.ksSC3(NroTermino);
         SacotoJonathan.jsSC4();
+        riosMarco.rmSC5(NroTermino);
+        ks.ksSC7(NroTermino);
         SacotoJonathan.jsSC8();
         SacotoJonathan.jsSC9();
+        
+        System.out.println("~~~~~~~~~~~FIGURAS~~~~~~~~~~~");
         SacotoJonathan.jsFN1();
+        riosMarco.rmF2(NroTermino);
+        ks.ksFigura4(NroTermino, caracter);
         SacotoJonathan.jsFN5();
+        riosMarco.rmF6(NroTermino);
+        ks.ksFigura8(NroTermino);
+        riosMarco.rmF10(NroTermino);
+        ks.ksFigura12(NroTermino);
         SacotoJonathan.jsFN13();
-        sc.close();
+        riosMarco.rmF14(NroTermino);
 
-
-    }
+        ks.ksFigura16(NroTermino);
+        riosMarco.rmF18(NroTermino);
+    }    
 }

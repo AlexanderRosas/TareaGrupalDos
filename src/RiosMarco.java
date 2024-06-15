@@ -5,6 +5,7 @@ public class RiosMarco {
     static Scanner sc = new Scanner(System.in);
 
     public void rmSN3(int n) {
+        System.out.println("Serie SN3:");
         int a = 0, b = 1, c;
         for (int i = 0; i < n; i++) {
             int numerator = a;
@@ -18,6 +19,7 @@ public class RiosMarco {
     }
 
     public void rmSN7(int n) {
+        System.out.println("Serie SN7:");
         for (int i = 0; i < n; i++) {
             System.out.print((1 + 3 * i) + " ");
         }
@@ -25,6 +27,7 @@ public class RiosMarco {
     }
 
     public void rmSN11(int n) {
+        System.out.println("Serie SN11:");
         for (int i = 0; i < n; i++) {
             System.out.print((i + 1) * (i + 2) + " ");
         }
@@ -32,6 +35,7 @@ public class RiosMarco {
     }
 
     public void rmSC1(int n) {
+        System.out.println("Serie SC1:");
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0) {
                 System.out.print("+ ");
@@ -43,6 +47,7 @@ public class RiosMarco {
     }
 
     public void rmSC5(int n) {
+        System.out.println("Serie SC5:");
         String[] symbols = {"\\", "|", "/", "-", "|"};
         for (int i = 0; i < n; i++) {
             System.out.print(symbols[i % symbols.length] + " ");
@@ -51,6 +56,7 @@ public class RiosMarco {
     }
 
     public void rmF2(int tamanio) {
+        System.out.println("Figura F2:");
         for (int i = 0; i < tamanio; i++) {
             for (int j = 0; j < tamanio; j++) {
                 if (i == 0 || i == tamanio - 1) {
@@ -74,6 +80,7 @@ public class RiosMarco {
     }
 
     public void rmF6(int tamanio) {
+        System.out.println("Figura F6:");
         for (int i = 0; i < tamanio; i++) {
             for (int j = 0; j < tamanio - i - 1; j++) {
                 System.out.print(" ");
@@ -86,6 +93,7 @@ public class RiosMarco {
     }
 
     public void rmF10(int tamanio){
+        System.out.println("Figura F10:");
         String positivo = "|_+_";
         String negativo = "|_-_";
         for(int i = 0; i < tamanio; i++){
@@ -103,7 +111,7 @@ public class RiosMarco {
     
 
     public void rmF14(int tamanio){
-           
+        System.out.println("Figura F14:");  
         for (int i = 0; i < tamanio; i++) {
             
             int mfNumero = 1;            
@@ -123,6 +131,7 @@ public class RiosMarco {
     }
 
     public void rmF18(int tamanio) {
+        System.out.println("Figura F18:");
         for (int i = 1; i <= tamanio; i++) {
             System.out.print("1 ");
             for (int j = 2; j <= i; j++) {
