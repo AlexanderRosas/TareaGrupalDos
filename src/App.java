@@ -52,5 +52,16 @@ public class App {
 
         ks.ksFigura16(NroTermino);
         riosMarco.rmF18(NroTermino);
+
+        System.out.println("~~~~~~~~~~~CADENA CARACTERES~~~~~~~~~~~");
+
+        System.out.println("~~~~~~~~~~~ARRAYS~~~~~~~~~~~");
+
+        System.out.println("~~~~~~~~~~~LOADINGS~~~~~~~~~~~");
+        
+        System.out.println("~~~~~~~~~~~RECURSIVIDAD~~~~~~~~~~~");
+
+
+
     }    
 }
