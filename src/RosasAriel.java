@@ -13,7 +13,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime los números de la serie de Fibonacci.
      */
-    public static void raSN1(int tamano) {
+    public void raSN1(int tamano) {
         int arValAnt = 0;
         int arValAct = 1;
         int arResult = 0;
@@ -31,7 +31,7 @@ public class RosasAriel {
      * @param tamano La cantidad de pares de términos de la serie a generar.
      * Imprime la serie en pares consecutivos incrementando de dos en dos.
      */
-    public static void raSN2(int tamano) {
+    public void raSN2(int tamano) {
         System.out.print("SN2: ");
         int arResltUno = 0;
         int arResltDos = 1;
@@ -46,7 +46,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime una serie de fracciones con denominador impar.
      */
-    public static void raSN3(int tamano) {
+    public void raSN3(int tamano) {
         int arNum = 0;
         int arDem = 0;
         int arValAnt = 0;
@@ -72,7 +72,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime una serie de fracciones con denominador par.
      */
-    public static void raSN4(int tamano) {
+    public void raSN4(int tamano) {
         System.out.print("SN4: ");
         int arNum = 0;
         int arDem = 0;
@@ -98,7 +98,7 @@ public class RosasAriel {
      * @param tamano La cantidad de números primos a generar.
      * Imprime una serie de números primos.
      */
-    public static void raSN5(int tamano) {
+    public void raSN5(int tamano) {
         int arVal = 2;
         System.out.print("SN5: ");
         for (int i = 0; i < tamano; i++) {
@@ -114,7 +114,7 @@ public class RosasAriel {
      * @param valor El número a evaluar.
      * @return Devuelve true si el número es primo, de lo contrario false.
      */
-    public static boolean esPrimo(int valor) {
+    public boolean esPrimo(int valor) {
         if (valor <= 1) {
             return false;
         }
@@ -131,7 +131,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime la serie resultante.
      */
-    public static void raSN6(int tamano) {
+    public void raSN6(int tamano) {
         System.out.print("SN6: ");
         int arVal = 1;
         int arValDos = 1;
@@ -147,7 +147,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime la serie resultante.
      */
-    public static void raSN7(int tamano) {
+    public void raSN7(int tamano) {
         System.out.print("SN7: ");
         int arVal = 1;
         for (int i = 0; i < tamano; i++) {
@@ -161,7 +161,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime la serie resultante.
      */
-    public static void raSN8(int tamano) {
+    public void raSN8(int tamano) {
         System.out.print("SN8: ");
         int arVal = 3;
         for (int i = 0; i < tamano; i++) {
@@ -175,7 +175,7 @@ public class RosasAriel {
      * @param tamano La cantidad de términos de la serie a generar.
      * Imprime la serie resultante.
      */
-    public static void raSN10(int tamano) {
+    public void raSN10(int tamano) {
         System.out.print("SN10: ");
         int arVal = 3;
         int arResult = 0;
@@ -192,7 +192,7 @@ public class RosasAriel {
      * @param tamano La cantidad de grupos de caracteres que se deben imprimir.
      * @param caracter El carácter que se imprimirá.
      */
-    public static void raSC2(int tamano, char caracter) {
+    public void raSC2(int tamano, String caracter) {
         System.out.print("SC2: ");
         for (int i = 1; i <= tamano; i++) {
             int fibValue = valoresFibonacci(i);
@@ -208,7 +208,7 @@ public class RosasAriel {
      * @param arN La posicion en la secuencia de Fibonacci para cual se desea el valor
      * @return El valor de Fibonnaci en la posicion de "arN"
      */
-    public static int valoresFibonacci(int arN) {
+    public int valoresFibonacci(int arN) {
         if (arN <= 0) return 0;
         if (arN == 1) return 1;
         int arNum1 = 0, arN2 = 1;
@@ -225,7 +225,7 @@ public class RosasAriel {
      * hasta el número de caracteres especificado por el parámetro `tamano`
      * @param tamano
      */
-    public static void raSC6(int tamano) {
+    public void raSC6(int tamano) {
         System.out.print("SC6: ");
         for (int i = 0; i <= tamano; i++) {
             if (tamano > 25 ){
@@ -242,7 +242,7 @@ public class RosasAriel {
      * @param caracter El carácter que se imprimirá para formar el triángulo.
      * @param tamano La altura del triángulo.
      */
-    public static void raSF3(char caracter,int tamano){
+    public void raSF3(String caracter,int tamano){
         int arColum = 1;
         int arFil = tamano;
         for (;arColum<=arFil;arColum++){
@@ -255,7 +255,7 @@ public class RosasAriel {
     /*
      * Imprime una escalera de "---" y barras verticales "|", depende un tamano dado.
      */
-    public static void raSF7(int tamano){
+    public void raSF7(int tamano){
         int arColum = 1;
         int arFil = tamano;
         for (;arColum<=arFil;arColum++){
@@ -268,7 +268,7 @@ public class RosasAriel {
     /*
      * Imprime una escalera de "---" y barras verticales "|", depende un tamano dado.
      */
-    public static void raSF11(int tamano){
+    public void raSF11(int tamano){
         int arColum = 1;
         int arFil = tamano;
         for (;arColum<=arFil;arColum++){
@@ -286,7 +286,7 @@ public class RosasAriel {
      * El primer número de cada fila y el diagonal son siempre 1.
      * @param tamano El tamaño del Triángulo de Pascal a imprimir.
      */
-    public static void raSF15(int tamano){
+    public void raSF15(int tamano){
         System.out.println("Figura 15:");
         int[][] arTrianguloPascal = new int[tamano][tamano];
         arTrianguloPascal[0][0] = 1;
@@ -366,7 +366,7 @@ public class RosasAriel {
         }
         scanner.close();
     }
-    public static void barraProgreso(String palabra, int porcentaje){
+    public void barraProgreso(String palabra, int porcentaje){
         int longBarra = 20;
         int cantidadLLena = (int) ((porcentaje/100.0)*longBarra);
         int cantidadVacia = longBarra - cantidadLLena;
@@ -417,7 +417,7 @@ public class RosasAriel {
         System.out.println();
     }
 
-    public static char getSpinnerChar(int porcentaje) {
+    public char getSpinnerChar(int porcentaje) {
         switch (porcentaje % 5) {
             case 0:
                 return '|';

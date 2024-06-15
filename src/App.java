@@ -7,6 +7,7 @@ public class App {
         String caracter;
         RiosMarco riosMarco = new RiosMarco();
         KatherineSanchez ks = new KatherineSanchez();
+        RosasAriel ar = new RosasAriel();
         System.out.println("~~~~~~~~~~~Bienvenido~~~~~~~~~~~");
         System.out.print("Ingrese caracter con el que se formaran las figuras: ");
         caracter = sc.nextLine();
@@ -22,18 +23,24 @@ public class App {
         } while (NroTermino <= 0);
         System.out.println("~~~~~~~~~~~SERIES NUMERICAS~~~~~~~~~~~");
         ks.ksSN1(NroTermino);
+        ar.raSN2(NroTermino);
         riosMarco.rmSN3(NroTermino);
+        ar.raSN4(NroTermino);
         ks.ksSN5(NroTermino);
-        SacotoJonathan.jsSN4();
+        ar.raSN6(NroTermino);
         riosMarco.rmSN7(NroTermino);
-        riosMarco.rmSN11(NroTermino);
         SacotoJonathan.jsSN8();
         ks.ksSN9(NroTermino);
+        ar.raSN10(NroTermino);
+        riosMarco.rmSN11(NroTermino);
+
         System.out.println("~~~~~~~~~~~SERIES DE CARACTERES~~~~~~~~~~~");
         riosMarco.rmSC1(NroTermino);
+        ar.raSC2(NroTermino, caracter);
         ks.ksSC3(NroTermino);
         SacotoJonathan.jsSC4();
         riosMarco.rmSC5(NroTermino);
+        ar.raSC6(NroTermino);
         ks.ksSC7(NroTermino);
         SacotoJonathan.jsSC8();
         SacotoJonathan.jsSC9();
@@ -41,15 +48,18 @@ public class App {
         System.out.println("~~~~~~~~~~~FIGURAS~~~~~~~~~~~");
         SacotoJonathan.jsFN1();
         riosMarco.rmF2(NroTermino);
+        ar.raSF3(caracter, NroTermino);
         ks.ksFigura4(NroTermino, caracter);
         SacotoJonathan.jsFN5();
         riosMarco.rmF6(NroTermino);
+        ar.raSF7(NroTermino);
         ks.ksFigura8(NroTermino);
         riosMarco.rmF10(NroTermino);
+        ar.raSF11(NroTermino);
         ks.ksFigura12(NroTermino);
         SacotoJonathan.jsFN13();
         riosMarco.rmF14(NroTermino);
-
+        ar.raSF15(NroTermino);
         ks.ksFigura16(NroTermino);
         riosMarco.rmF18(NroTermino);
 
