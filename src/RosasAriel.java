@@ -3,8 +3,11 @@
  * @version 1.0
  * @author arielrosas
  */
-public class RosasAriel {
 
+import java.util.Scanner;
+
+public class RosasAriel {
+     Scanner scanner = new Scanner(System.in);
     /*
      * Genera la serie de Fibonacci hasta un tamano especificado.
      * @param tamano La cantidad de términos de la serie a generar.
@@ -339,23 +342,105 @@ public class RosasAriel {
         System.out.println(fraseNv);
     }
 
-    public static void raAR1(){
+    public void raAR1(){
         System.out.println("Arrays 01:");
         System.out.println("Ingrese su nombre completo");
+        String nombreCompleto = scanner.nextLine();
+        String[] palabras = nombreCompleto.split(" ");
+
+        int[] porcentajes = new int[palabras.length];
+
+        System.out.println("Ingrese el porcentaje de cada palabra: ");
+        for(int i = 0;i < palabras.length;i++){
+            do{
+                System.out.print(palabras[i] + ": ");
+                porcentajes[i] = scanner.nextInt();
+                if(porcentajes[i]>100 || porcentajes[i]<0){
+                    System.out.println("Ingrese un valor entre el 0 y 100");
+                }
+            }while(porcentajes[i]>100 || porcentajes[i]<0);
+        }
+
+        for (int i = 0; i < palabras.length; i++) {
+            barraProgreso(palabras[i], porcentajes[i]);
+        }
+        scanner.close();
     }
-    public static void raLoadings7(){
+    public static void barraProgreso(String palabra, int porcentaje){
+        int longBarra = 20;
+        int cantidadLLena = (int) ((porcentaje/100.0)*longBarra);
+        int cantidadVacia = longBarra - cantidadLLena;
+
+        StringBuilder barra = new StringBuilder("[");
+        for (int i = 0; i < cantidadLLena; i++) {
+            barra.append("=");
+        }
+        for (int i = 0; i < cantidadVacia; i++) {
+            barra.append(" ");
+        }
+        barra.append("] ");
+
+        int longitudPalabra = (int) ((porcentaje / 100.0) * palabra.length());
+        String prePalabra = palabra.substring(0, longitudPalabra);
+        System.out.printf("%s %3d%% %s%n", barra.toString(), porcentaje, prePalabra);
+    }
+    public void raLoadings7() throws InterruptedException{
+        int porcentaje = 0;
+        int longitudBarra = 20;
+        int delay = 100;
+
+        while (porcentaje <= 100) {
+            System.out.print("\r");
+
+            int cantidadLlena = (int) (porcentaje / 5.0);
+            int cantidadVacia = longitudBarra - cantidadLlena;
+
+            StringBuilder barra = new StringBuilder("[");
+            for (int i = 0; i < cantidadLlena; i++) {
+                barra.append("=");
+            }
+            if (cantidadVacia > 0) {
+                barra.append(" "+ getSpinnerChar(cantidadVacia));
+                cantidadVacia--;
+            }
+            for (int i = 0; i < cantidadVacia; i++) {
+                barra.append(" ");
+            }
+            barra.append("]");
+
+            System.out.printf("%s %3d%% ", barra.toString(), porcentaje);
+
+            Thread.sleep(delay);
+
+            porcentaje += 5;
+        }
+        System.out.println();
+    }
+
+    public static char getSpinnerChar(int porcentaje) {
+        switch (porcentaje % 5) {
+            case 0:
+                return '|';
+            case 1:
+            case 4:
+                return '/';
+            case 2:
+            case 3:
+                return '-';
+            default:
+                return '|';
+        }
+    }
+    public void raLoadings11(){
             
     }
-    public static void raLoadings11(){
+    public void raLoadings9(){
             
     }
-    public static void raLoadings9(){
+    public void raRecur3(){
             
     }
-    public static void raRecur3(){
-            
-    }
-    public static void raRecur6(){
+    public void raRecur6(){
             
     }
 
