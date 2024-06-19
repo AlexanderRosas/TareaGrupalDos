@@ -111,7 +111,7 @@ public class KatherineSanchez {
      * @param ksTamFig4 : Tamano de la figura a mostrar
      * @param ksCaracFig4 : caracter que forma la figura 
      */
-    void ksFigura4(int ksTamFig4, String ksCaracFig4) {
+    void ksFigura4(int ksTamFig4, Character ksCaracFig4) {
         System.out.println();
         System.out.println("*Ejercicio N°7: ");
         for (int i = 0; i < ksTamFig4; i++) {

@@ -4,13 +4,31 @@ public class App {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
         int NroTermino = 0, KsNroTermino2 = 0; 
-        String caracter;
+        Character caracter;
         RiosMarco riosMarco = new RiosMarco();
         KatherineSanchez ks = new KatherineSanchez();
         RosasAriel ar = new RosasAriel();
+        String fraseString = null;
         System.out.println("~~~~~~~~~~~Bienvenido~~~~~~~~~~~");
-        System.out.print("Ingrese caracter con el que se formaran las figuras: ");
-        caracter = sc.nextLine();
+        
+        do {
+            try {
+                System.out.println("Por favor, ingrese un único carácter:");
+                String userInput = sc.nextLine();
+
+                if (userInput.length() != 1) {
+                    throw new IllegalArgumentException("Debe ingresar exactamente un solo carácter. Inténtelo de nuevo.");
+                }
+
+                caracter = userInput.charAt(0);
+                
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+                caracter = null;
+            }
+        } while (caracter == null);
+
+
         do {
             try {
                 System.out.print("Ingrese cantidad de terminos que desea ver: ");
@@ -64,13 +82,70 @@ public class App {
         riosMarco.rmF18(NroTermino);
 
         System.out.println("~~~~~~~~~~~CADENA CARACTERES~~~~~~~~~~~");
+        do {
+            try {
+                System.out.println("Por favor, ingrese una frase:");
+                fraseString = sc.nextLine();
+                
+                if (fraseString.trim().isEmpty()) {
+                    throw new IllegalArgumentException("La entrada no puede estar vacía. Inténtelo de nuevo.");
+                }
+                
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+                fraseString = null;
+            }
+        } while (fraseString == null);
+
+        do {
+            try {
+                System.out.println("Por favor, ingrese un único carácter:");
+                String userInput = sc.nextLine();
+
+                if (userInput.length() != 1) {
+                    throw new IllegalArgumentException("Debe ingresar exactamente un solo carácter. Inténtelo de nuevo.");
+                }
+
+                caracter = userInput.charAt(0);
+                
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+                caracter = null;
+            }
+        } while (caracter == null);
+
+        ar.raCC2(fraseString, caracter);
+        riosMarco.rmC03();
+        riosMarco.rmC05();
+        SacotoJonathan.SerieCaracteres6();
+        riosMarco.rmC07();
+        SacotoJonathan.SerieCaracteres8();
+        ar.raCC9(fraseString);
 
         System.out.println("~~~~~~~~~~~ARRAYS~~~~~~~~~~~");
+        ar.raAR1();
+        riosMarco.rmA04();
+        SacotoJonathan.SeriesArrays5();
 
         System.out.println("~~~~~~~~~~~LOADINGS~~~~~~~~~~~");
-        
-        System.out.println("~~~~~~~~~~~RECURSIVIDAD~~~~~~~~~~~");
 
+        riosMarco.rmL02();
+        SacotoJonathan.SeriesLoading4();
+        SacotoJonathan.SeriesLoading5();
+        ar.raLoadings7();
+        riosMarco.rmL08();
+        ar.raLoadings9();
+        SacotoJonathan.SeriesLoading10();
+        ar.raLoadings11();
+
+
+
+        System.out.println("~~~~~~~~~~~RECURSIVIDAD~~~~~~~~~~~");
+        RiosMarco.rmR02();
+        ar.raRecur3();
+        SacotoJonathan.SeriesRecursivas4();
+        SacotoJonathan.SeriesRecursivas5();
+        ar.raRecur6();
 
 
     }    

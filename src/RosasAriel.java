@@ -192,7 +192,7 @@ public class RosasAriel {
      * @param tamano La cantidad de grupos de caracteres que se deben imprimir.
      * @param caracter El carácter que se imprimirá.
      */
-    public void raSC2(int tamano, String caracter) {
+    public void raSC2(int tamano, Character caracter) {
         System.out.print("SC2: ");
         for (int i = 1; i <= tamano; i++) {
             int fibValue = valoresFibonacci(i);
@@ -242,7 +242,7 @@ public class RosasAriel {
      * @param caracter El carácter que se imprimirá para formar el triángulo.
      * @param tamano La altura del triángulo.
      */
-    public void raSF3(String caracter,int tamano){
+    public void raSF3(Character caracter,int tamano){
         int arColum = 1;
         int arFil = tamano;
         for (;arColum<=arFil;arColum++){

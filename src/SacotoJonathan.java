@@ -364,7 +364,7 @@ public class SacotoJonathan {
         }
         System.out.println(" ");
     }
-    public void SerieCaracteres6 (){
+    public static void SerieCaracteres6 (){
         System.out.println("Serie Caracteres 6");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Indique que palabra desea invertir: ");
@@ -375,7 +375,7 @@ public class SacotoJonathan {
 
         scanner.close();
     }
-    public void SerieCaracteres8(){
+    public static void SerieCaracteres8(){
         System.out.println("Serie Caracteres 8");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -412,7 +412,7 @@ public class SacotoJonathan {
         scanner.close();
     }
 
-    public void SeriesArrays5 () throws InterruptedException{
+    public static void SeriesArrays5 () throws InterruptedException{
         System.out.println("Serie Arrays 5");
         Scanner scanner = new Scanner(System.in);
 
@@ -461,7 +461,7 @@ public class SacotoJonathan {
         System.out.println();
     }
     
-    public void SeriesLoading4(){
+    public static void SeriesLoading4(){
         System.out.println("Serie Loading 4");
         final int MAX = 100;
         final int DELAY = 100;
@@ -483,7 +483,7 @@ public class SacotoJonathan {
         System.out.printf("\r%s %d%%\n", "o0o", MAX);
     }
     
-    public void SeriesLoading5(){
+    public static void SeriesLoading5(){
         System.out.println("Serie Loading 5");
         int totalSteps = 100;
 
@@ -518,7 +518,7 @@ public class SacotoJonathan {
         System.out.print("\r[" + bar + "] " + percentage + "%");
     }
 
-    public void SeriesLoading10(){
+    public static void SeriesLoading10(){
         System.out.println("Serie Loading 10");
         Random random = new Random();
         int totalSize = random.nextInt(91) + 10;
@@ -563,7 +563,7 @@ public class SacotoJonathan {
         System.out.print(progressBar);
     }
 
-    public void SeriesRecursivas4(){
+    public static void SeriesRecursivas4(){
         System.out.println("Serie Recursivas 4");
         Scanner scanner = new Scanner(System.in);
 
@@ -586,7 +586,7 @@ public class SacotoJonathan {
         return a * potencia(a, b - 1);
     }
     
-    public void SeriesRecursivas5(){
+    public static void SeriesRecursivas5(){
         System.out.println("Serie Recursivas ");
 
         Scanner scanner = new Scanner(System.in);
