@@ -18,7 +18,7 @@ public class RosasAriel {
         int arValAct = 1;
         int arResult = 0;
         System.out.print("SN1: ");
-        for(int i = 0;i<tamaño;i++){
+        for(int i = 0;i<tamano;i++){
             System.out.print(arResult+" "); 
             arResult = arValAct +   arValAnt; 
             arValAnt = arValAct;
@@ -125,6 +125,7 @@ public class RosasAriel {
             }
         System.out.println();
         }
+    }
       
     public static void raSN9(int tamaño){
         
