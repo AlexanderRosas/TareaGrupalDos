@@ -394,6 +394,7 @@ public class RosasAriel {
 
             int cantidadLlena = (int) (porcentaje / 5.0);
             int cantidadVacia = longitudBarra - cantidadLlena;
+            
 
             StringBuilder barra = new StringBuilder("[");
             for (int i = 0; i < cantidadLlena; i++) {
