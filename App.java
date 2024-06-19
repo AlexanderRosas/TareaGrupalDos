@@ -9,7 +9,7 @@ public class App {
         Arrays aks    = new Arrays();
         Loading lks   = new Loading();
         recursivo rks = new recursivo();
-        Boolean ks    = true;
+        Boolean kslBoolean    = true;
         int numFacKS = -1;
         System.out.println("~~~~~~~~~~~Bienvenido~~~~~~~~~~~");
         System.out.print("Ingrese caracter con el que se formaran las figuras: ");
@@ -47,13 +47,13 @@ public class App {
                 System.out.print("Ingrese letra que desea eliminar: ");
                 String elimLetKS = sc.nextLine();
                 sks.Ejercicio4KS(KSCaracter,elimLetKS);
-                ks = false; 
+                kslBoolean = false; 
             } catch (Exception e) {
                 System.out.println("**Asegurese que la letra ingresada se encuentre en la frase**");
                 sc.next();
-                ks = true;
+                kslBoolean = true;
             }    
-        } while (ks );
+        } while (kslBoolean );
         
         System.out.println("*************Bienvenido a Array*************");
         System.out.println("-------------Ejercicio N°2-------------");
